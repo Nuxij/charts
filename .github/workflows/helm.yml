@@ -29,6 +29,7 @@ jobs:
           helm repo add bitnami https://charts.bitnami.com/bitnami
           for dir in $(ls -d charts/*); do
             helm dependency update $dir;
+            helm package $dir
           done
 
       - name: Run chart-releaser
@@ -38,6 +39,7 @@ jobs:
 
       - name: Release to gh-pages
         run: |
+          ls charts
           mkdir pages && mv index.yml pages/
           git add pages && git commit -m "Initial pages subtree commit"
           git subtree push --prefix pages origin gh-pages

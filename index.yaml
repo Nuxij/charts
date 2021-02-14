@@ -1,0 +1,56 @@
+apiVersion: v1
+entries:
+  keycloak:
+  - apiVersion: v1
+    appVersion: 8.0.1
+    created: "2021-02-14T12:02:19.249898605Z"
+    dependencies:
+    - condition: keycloak.persistence.deployPostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.1.0
+    description: Open Source Identity and Access Management For Modern Applications
+      and Services
+    digest: 62b5a7a932d777c3075230b475cf8eab847f693b3d611c45ebc65f8ed93e0be7
+    home: https://www.keycloak.org/
+    icon: https://www.keycloak.org/resources/images/keycloak_logo_480x108.png
+    keywords:
+    - sso
+    - idm
+    - openid connect
+    - saml
+    - kerberos
+    - ldap
+    maintainers:
+    - email: unguiculus@gmail.com
+      name: unguiculus
+    - email: thomas.darimont+github@gmail.com
+      name: thomasdarimont
+    name: keycloak
+    sources:
+    - https://github.com/codecentric/helm-charts
+    - https://github.com/jboss-dockerfiles/keycloak
+    urls:
+    - https://Nuxij.github.io/charts/keycloak-6.1.0.tgz
+    version: 6.1.0
+  scalelite:
+  - apiVersion: v2
+    appVersion: 1.0.6
+    created: "2021-02-14T12:02:19.266055717Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.4
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.8.0
+    description: A Helm chart for scalelite for bbb
+    digest: 37b7dde9c7ac5e1f4f73db4f72c3b5516904a24a4d12b47ba3e8071bb98ea31c
+    name: scalelite
+    type: application
+    urls:
+    - https://Nuxij.github.io/charts/scalelite-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-02-14T12:02:19.245595901Z"

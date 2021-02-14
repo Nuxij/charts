@@ -35,3 +35,9 @@ jobs:
         uses: helm/chart-releaser-action@v1.1.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Release to gh-pages
+        run: |
+          mkdir pages && mv index.yml pages/
+          git add pages && git commit -m "Initial pages subtree commit"
+          git subtree push --prefix pages origin gh-pages

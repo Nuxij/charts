@@ -3,7 +3,7 @@ entries:
   keycloak:
   - apiVersion: v1
     appVersion: 8.0.1
-    created: "2021-02-23T17:59:03.269473227Z"
+    created: "2021-02-23T18:28:39.616506366Z"
     dependencies:
     - condition: keycloak.persistence.deployPostgres
       name: postgresql
@@ -11,7 +11,7 @@ entries:
       version: 8.1.0
     description: Open Source Identity and Access Management For Modern Applications
       and Services
-    digest: c45df65ee821ffa068a48f0362eac3d9da0349493cdcbcaad6737ec73668c5c8
+    digest: 1516f9e2ccc4dadb6e9e391c649f7a26e1bb8415198e2fdd60110a0a7c4ed8dc
     home: https://www.keycloak.org/
     icon: https://www.keycloak.org/resources/images/keycloak_logo_480x108.png
     keywords:
@@ -36,7 +36,7 @@ entries:
   scalelite:
   - apiVersion: v2
     appVersion: 1.0.6
-    created: "2021-02-23T17:59:03.27927284Z"
+    created: "2021-02-23T18:28:39.624277123Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -47,10 +47,10 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 10.8.0
     description: A Helm chart for scalelite for bbb
-    digest: fb65f5b3aafc3da5a6c2bc7d29e0c04a7465b10774ddfd0ffef0181bef68f9b9
+    digest: 73c2e2ab2deaa64d1542322b16d36d4b1a52b394ed5e734661c5ba5a4fbd7299
     name: scalelite
     type: application
     urls:
     - https://Nuxij.github.io/charts/scalelite-1.0.0.tgz
     version: 1.0.0
-generated: "2021-02-23T17:59:03.265171221Z"
+generated: "2021-02-23T18:28:39.612722786Z"

@@ -4,8 +4,8 @@ metadata:
   name: recordings-pvc
 spec:
   accessModes:
-    - ReadWriteMany
-  storageClassName: nfs
+    - {{- include "scalelite.pvcAccessMode" . }}
+  storageClassName: {{- include "scalelite.pvcStorageClass" . }}
   resources:
     requests:
       storage: 250Gi

@@ -6,23 +6,6 @@ Expand the name of the chart.
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
-{{/*PVC Setup*/}}
-{{- define "scalelite.pvcStorageClass" }}
-{{- if .Values.pvcStorageClass }}
-{{- .Values.pvcStorageClass }}
-{{- else }}
-{{- print "nfs" }}
-{{- end }}
-{{- end }}
-{{- define "scalelite.pvcAccessMode" }}
-{{- if .Values.pvcAccessMode }}
-{{- .Values.pvcAccessMode }}
-{{- else }}
-{{- print "ReadWriteMany" }}
-{{- end }}
-{{- end }}
-
-
 {{/*
 Create a default fully qualified api app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
